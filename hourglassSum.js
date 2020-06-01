@@ -1,16 +1,27 @@
 function hourglassSum(arr) {
-  let max = -63;
+  let hourglasses = [];
 
-  for (let i = 0; i < 4; i++) {
-    for (let j = 0; j < 4; j++) {
-      let sum = arr[i + 1][j + 1];
-      for (let k = 0; k < 3; k++) {
-        sum += arr[i][j + k];
-        sum += arr[i + 2][j + k];
+  if (
+    typeof arr === 'object' &&
+    arr.length === 6 &&
+    arr.map((i) => i.length).reduce((p, n) => p + n) === 36
+  ) {
+    for (let row = 0; row <= 3; row++) {
+      for (let col = 0; col <= 3; col++) {
+        let sum = 0;
+
+        sum += arr[row][col];
+        sum += arr[row][col + 1];
+        sum += arr[row][col + 2];
+        sum += arr[row + 1][col + 1];
+        sum += arr[row + 2][col];
+        sum += arr[row + 2][col + 1];
+        sum += arr[row + 2][col + 2];
+
+        hourglasses.push(sum);
       }
-      if (sum > max) max = sum;
     }
   }
 
-  return max;
+  return hourglasses.length > 0 ? Math.max(...hourglasses) : 0;
 }
