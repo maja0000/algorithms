@@ -1,3 +1,4 @@
+// cut into smaller arrays length num
 let arr = [1, 1, 2, 2, 3, 3, 4, 4];
 
 function cutArray(arr, num) {
