@@ -4,7 +4,7 @@ function toGoatLatin(str) {
   let splitWords = str.split(' ');
 
   let addMa = splitWords.map((each) =>
-    ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'].indexOf(each[0]) !== -1
+    ['a', 'e', 'i', 'o', 'u'].indexOf(each[0].toLowerCase()) !== -1
       ? each.concat('ma')
       : each.substring(1) + each[0] + 'ma'
   );
