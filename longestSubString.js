@@ -5,7 +5,7 @@ const longestSubSequence = (words, s) => {
   const isSubSequence = (s, word) => {
     // 'abc' => 'a.*b.*c'
     const match = s.match(word.split('').join('.*'));
-    console.log(word.split('').join('.*'));
+    // console.log(word.split('').join('.*'));
     return match ? true : false;
   };
 
