@@ -2,12 +2,12 @@
 //  and S representing the stones you have.  Each character in S is a type of stone
 //  you have.  You want to know how many of the stones you have are also jewels.
 
-const numJewelsInStones = function (jules, stones) {
-  let newJules = 0;
+const numJewelsInStones = function (jewels, stones) {
+  let newJewels = 0;
   for (const stone of stones) {
-    if (jules.indexOf(stone) !== -1) {
-      newJules++;
+    if (jewels.indexOf(stone) !== -1) {
+      newJewels++;
     }
   }
-  return newJules;
+  return newJewels;
 };
