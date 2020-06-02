@@ -3,15 +3,18 @@ let numbers = [2, 3, 50, 6, 1, 9, 10];
 
 function findLargestDiff(nums) {
   let sorted = nums.sort((a, b) => a - b);
-  let biggestDifference = 0;
 
-  for (i = 1; i < sorted.length; i++) {
-    biggestDifference = Math.max(biggestDifference, sorted[i] - sorted[i - 1]);
-  }
-  //   for(let i =0;i<sorted.length;i++){
-  //     if(sorted[i+1]-sorted[i] > biggestDifference){
-  //       biggestDifference=sorted[i+1]-sorted[i]
-  //     }
-  return biggestDifference;
+  let previous = sorted[0];
+  let reduced = sorted.reduce((biggestDifference, num) => {
+    let diff = num - previous;
+    previous = num;
+    return Math.max(biggestDifference, diff);
+  }, 0);
+
+  return reduced;
 }
 console.log(findLargestDiff(numbers));
+
+//   for (i = 1; i < sorted.length; i++) {
+//     biggestDifference = Math.max(biggestDifference, sorted[i] - sorted[i - 1]);
+//   }
