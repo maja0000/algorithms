@@ -9,13 +9,9 @@ function plusMinus(arr) {
   let plus = 0;
   let minus = 0;
   let zero = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      plus += 1;
-    } else if (arr[i] < 0) {
-      minus += 1;
-    } else zero += 1;
-  }
+  arr.map((each) => {
+    each == 0 ? zero++ : each > 0 ? plus++ : minus++;
+  });
   console.log((minus / total).toFixed(6));
   console.log((zero / total).toFixed(6));
   console.log((plus / total).toFixed(6));
