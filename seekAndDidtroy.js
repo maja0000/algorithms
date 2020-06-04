@@ -1,3 +1,5 @@
+// if apears in second arr delete from the first
+
 function seekAndDistroy(arr, ...rest) {
   return arr.filter((value) => !rest.includes(value));
 }

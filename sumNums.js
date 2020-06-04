@@ -1,4 +1,5 @@
 // solution 1
+
 // sum numbers (not in array)
 const numToSeparate = 12345;
 const arrayOfDigits = Array.from(String(numToSeparate), Number);

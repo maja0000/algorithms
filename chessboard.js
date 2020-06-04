@@ -1,6 +1,7 @@
 // # Chessboard dojo
 
-// In order to represent a chessboard in a program, write a chessboard function that will return an array of arrays containing the squares coordinates.
+// In order to represent a chessboard in a program, write a chessboard function
+// that will return an array of arrays containing the squares coordinates.
 
 // ```javascript
 // [
@@ -9,7 +10,6 @@
 //     ...,
 //     ['h - 1', 'h - 2', 'h - 3', 'h - 4', 'h - 5', 'h - 6', 'h - 7', 'h - 8'],
 // ]
-// # Dojo-Chessboard
 
 function chessboard() {
   let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];

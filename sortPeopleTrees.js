@@ -1,3 +1,5 @@
+// where - 1 is a tree, they stay in the same place, sort people around
+
 let arr = [-1, 120, 180, -1, 130, -1];
 
 function sortByHeight(arr) {

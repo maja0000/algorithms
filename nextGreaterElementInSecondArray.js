@@ -1,3 +1,6 @@
+// find index of the next bigger number from the second array
+// answer [-1, 3, -1]
+
 let arr1 = [4, 1, 2];
 let arr2 = [1, 3, 4, 2];
 

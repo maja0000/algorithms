@@ -16,6 +16,7 @@ function SumOddEven(array) {
 //     .filter((number) => number % 2 === 0)
 //     .reduce((accu, num) => accu + num);
 //   finalArray.push(evenNums);
+
 //   let oddNums = array
 //     .filter((number) => number % 2 !== 0)
 //     .reduce((accu, num) => accu + num);

@@ -1,5 +1,6 @@
 // REGEX
 // trim whitespaces and replace with "&&
+// "I&&do&&see&&some&&profits&
 
 let string = '    I do see some profits    ';
 
