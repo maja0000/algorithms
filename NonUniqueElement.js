@@ -1,3 +1,15 @@
+// find unique elemets from x number of  arrays
+function sym(...args) {
+  let merged = [].concat.apply([], args);
+  let unique = Array.from(new Set(merged)).sort((a, b) => a - b);
+
+  return unique;
+}
+
+sym([1, 2, 3], [5, 2, 1, 4]);
+
+console.log(sym([1, 2, 3], [5, 2, 1, 4], [2, 9, 9]));
+
 // find a non unique characters  in an array
 
 function nonUniqueElements(data) {
