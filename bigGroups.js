@@ -15,3 +15,5 @@ var largeGroupPositions = function (S) {
   return groups;
 };
 console.log(largeGroupPositions('abcdddeeeeaabbbcd'));
+
+// [[3,5],[6,9],[12,14]]
