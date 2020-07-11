@@ -1,6 +1,6 @@
-// For example, if the string  and , the substring we consider is ,
-// the first  characters of her infinite string.
-// There are 4 occurrences of a in the substring.
+// those 2 solutions wont work if in a string we have the same words -
+// indexOf on the second one will look at the first appearance of the element
+// and add less "a"s
 
 let s = 'maja';
 
@@ -28,3 +28,20 @@ function repeatedString(s, n) {
   if (slice.length === 1) return slice === 'a' ? numLetter1 + 1 : numLetter1;
   return numLetter1 + slice.split('').filter((letter) => letter === 'a').length;
 }
+
+// this works better
+var toGoatLatin = function (S) {
+  const arr = S.split(' ');
+  const vowels = 'aeiouAEIOU';
+  for (let i = 0; i < arr.length; i++) {
+    if (vowels.indexOf(arr[i][0]) > -1) {
+      console.log(arr[i][0]);
+      arr[i] = arr[i] + 'ma';
+    } else {
+      arr[i] = arr[i].slice(1) + arr[i][0] + 'ma';
+    }
+    arr[i] += 'a'.repeat(i + 1);
+  }
+  return arr.join(' ');
+};
+console.log(toGoatLatin('A x gij T Ka Stsl UTK kqdc A'));
