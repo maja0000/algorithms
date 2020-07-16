@@ -2,7 +2,6 @@
 function sym(...args) {
   let merged = [].concat.apply([], args);
   let unique = Array.from(new Set(merged)).sort((a, b) => a - b);
-
   return unique;
 }
 
