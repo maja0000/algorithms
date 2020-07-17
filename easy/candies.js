@@ -10,3 +10,10 @@ function kidsWithCandies(candies, extraCandies) {
   return candies.map((each) => (each + extraCandies >= biggest ? true : false));
 }
 console.log(kidsWithCandies([2, 3, 5, 1, 3], 3));
+
+// function kidsWithCandies(candies, extraCandies) {
+//   return candies.map((each) =>
+//     each + extraCandies >= Math.max(...candies) ? true : false
+//   );
+// }
+// console.log(kidsWithCandies([2, 3, 5, 1, 3], 3));
