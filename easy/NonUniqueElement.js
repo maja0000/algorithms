@@ -9,6 +9,13 @@ sym([1, 2, 3], [5, 2, 1, 4]);
 
 console.log(sym([1, 2, 3], [5, 2, 1, 4], [2, 9, 9]));
 
+// NEW SET
+// var deleteDuplicates = function(head) {
+//   let unique = new Set(head)
+//   return [...unique]
+// };
+// console.log(deleteDuplicates([1,1,2]))
+
 // find a non unique characters  in an array
 
 // function nonUniqueElements(data) {
